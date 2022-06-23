@@ -12,6 +12,7 @@ body.loading {
       align-items: center;
       justify-content: center;
       &.image-1 {
+        z-index: 100;
         width: 400px;
         left: 16%;
         bottom: 14%;
