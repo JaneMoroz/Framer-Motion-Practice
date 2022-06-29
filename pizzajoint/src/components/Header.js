@@ -26,7 +26,12 @@ const pathVariants = {
 const Header = () => {
   return (
     <header>
-      <div className="logo">
+      <motion.div
+        className="logo"
+        drag
+        dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+        dragElastic={0.7} // the lower the number, the harder to drag it around
+      >
         <motion.svg
           variants={svgVariants}
           initial="hidden"
@@ -46,7 +51,7 @@ const Header = () => {
             d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
           />
         </motion.svg>
-      </div>
+      </motion.div>
       <motion.div
         initial={{ y: -250 }}
         animate={{ y: -10 }}
